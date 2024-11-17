@@ -11,6 +11,7 @@
 - **Swagger (swagger-ui-express, swagger-jsdoc)**
 
 ## Estrutura de Pastas
+
 ```
 ├── config/
 │ └── config.js
@@ -33,7 +34,6 @@
 ├── package.json
 └── README.md
 ```
-
 
 ## Instruções para Configurar e Executar o Projeto
 
@@ -120,7 +120,6 @@ Utilize um cliente HTTP como **Insomnia**, ou a própria interface do Swagger pa
 Para ter acesso aos endpoints, incluir o cabeçalho de autorização com o token JWT:
 Authorization: Bearer seu_token
 
-
 #### Criar produto
 
 - **Endpoint:** `POST /products`
@@ -163,6 +162,36 @@ Authorization: Bearer seu_token
 - O token JWT expira em **1 hora**.
 - Não compartilhe o arquivo `.env` ou informações sensíveis.
 - O projeto utiliza **SQLite** para facilitar a configuração, mas pode ser adaptado para outros bancos de dados.
+
+---
+
+## Utilizando a Aplicação com Docker
+
+### Pré-requisitos
+
+- **Docker** instalado
+
+### Passos
+
+1. **Construir a imagem Docker**
+
+   No diretório raiz do projeto, execute o comando:
+
+   ```bash
+   docker build -t api-catalogo-produtos .
+   ```
+
+2. **Executar o container Docker**
+
+   Após a construção da imagem, execute o container com o comando:
+
+   ```bash
+   docker run -d -p 3000:3000 --name api-catalogo-produtos api-catalogo-produtos
+   ```
+
+3. **Acessar a documentação Swagger**
+
+   Abra o navegador e acesse: [http://localhost:3000](http://localhost:3000)
 
 ---
 
