@@ -158,14 +158,6 @@ Authorization: Bearer seu_token
 
 - **Endpoint:** `DELETE /products/{id}`
 
-## Observações
-
-- O token JWT expira em **1 hora**.
-- Não compartilhe o arquivo `.env` ou informações sensíveis.
-- O projeto utiliza **SQLite** para facilitar a configuração, mas pode ser adaptado para outros bancos de dados.
-
----
-
 # Alunos
 
 Projeto realizado por:
